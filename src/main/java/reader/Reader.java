@@ -16,7 +16,6 @@ public class Reader {
     public ArrayList<News> read() throws IOException {
         Document doc = allInfoReader(MAIN_PATH);
         return fillingNewsList(doc);
-        //
     }
 
     private Document allInfoReader(String path) throws IOException {
