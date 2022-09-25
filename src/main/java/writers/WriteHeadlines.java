@@ -5,8 +5,8 @@ import java.io.IOException;
 
 public class WriteHeadlines {
     public void writeHeadlines(String headline) throws IOException {
-        FileWriter writer = new FileWriter("src/main/resources/headlines.txt");
-        writer.append("||" + headline);
+        FileWriter writer = new FileWriter("D:/development/football-news/src/main/resources/headlines.txt",true);
+        writer.write("||" + headline);
         writer.close();
     }
 }

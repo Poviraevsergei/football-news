@@ -18,6 +18,4 @@ public class TelegramBot extends TelegramLongPollingBot {
     public void onUpdateReceived(Update update) {
 
     }
-
-
 }

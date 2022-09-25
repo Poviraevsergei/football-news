@@ -1,7 +1,6 @@
 package reader;
 
 import model.News;
-import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -30,7 +29,7 @@ public class Reader {
         ArrayList<News> list = new ArrayList<>();
         Elements listNews = doc.select("div.additional-content__list");
         for (Element element : listNews.select("div.additional-content-item")) {
-            String title = element.select("a.additional-content-item__content-title").html();
+            String title = element.select("a.additional-content-item__content-title").html().trim();
             String photoPath = element.select("a.additional-content-item__photo").select("img").attr("src");
             String newsPath = "https://www.euro-football.ru" + element.select("a.additional-content-item__content-title").attr("href");
             String text = readTextFromPath(newsPath);
